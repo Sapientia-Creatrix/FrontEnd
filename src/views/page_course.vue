@@ -1,5 +1,5 @@
 <template>
-  <Nav></Nav>
+  <Nav class=""></Nav>
   <Display></Display>
 </template>
 
