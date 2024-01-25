@@ -1,9 +1,11 @@
 <template>
   <Nav></Nav>
-  <UserProfile class="content-below-nav"></UserProfile>
+  <Display></Display>
 </template>
 
 <script setup lang="ts">
+
 import Nav from "@/components/layout/navbar.vue";
-import UserProfile from "@/components/user/user_profile.vue";
+import Display from "@/components/course/display.vue";
+
 </script>

@@ -1,6 +1,8 @@
 <template>
-  <div class="w-full min-h-[10rem] bg-red-200 p-4 rounded-lg"></div>
-  <div>{{ props.data }}</div>
+  <div>
+    <div class="w-full min-h-[10rem] bg-red-200 p-4 rounded-lg"></div>
+    <div>{{ props.data }}</div>
+  </div>
 </template>
 
 <script setup lang="ts">

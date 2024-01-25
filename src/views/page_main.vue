@@ -1,6 +1,6 @@
 <template>
   <Nav></Nav>
-  <Display class="content-below-nav"></Display>
+  <Display></Display>
 </template>
 
 <script setup lang="ts">
