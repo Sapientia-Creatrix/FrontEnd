@@ -9,5 +9,5 @@ html, body, #app
 
 .content-below-nav
 {
-    @apply mt-[3rem]
+  @apply mt-[3rem]
 }
