@@ -11,7 +11,7 @@
   <!--   </div> -->
   <!-- </div> -->
   <div
-    class="navbar items-center justify-between flex bg-gray-800 text-neutral-content"
+    class="navbar items-center justify-between flex bg-gray-800 text-neutral-content sticky top-0 z-50"
   >
     <div
       class="text-2xl text-white font-semibold inline-flex items-center min-w-60"

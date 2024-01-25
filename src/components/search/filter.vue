@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full m-4">
+  <div class="m-4">
     <div class="font-bold text-2xl">評價</div>
     <div v-for="item in items" :key="item.id" class="my-2">
       <input :id = "'option-' + item.text" type="radio" class="mr-2" :value="item.value" v-model="checked">
