@@ -10,9 +10,8 @@
   <!--     <SearchOutlined class="my-1 mx-3" /> -->
   <!--   </div> -->
   <!-- </div> -->
-
   <div
-    class="items-center justify-between flex bg-gray-800 bg-opacity-90 px-12 py-4 mx-auto shadow-2xl sticky left-0 right-0 top-0 z-10"
+    class="navbar items-center justify-between flex bg-gray-800 text-neutral-content"
   >
     <div
       class="text-2xl text-white font-semibold inline-flex items-center min-w-60"
@@ -31,7 +30,7 @@
         </div>
       </ul>
     </div>
-    <div>
+    <div class="flex-none gap-2">
       <ul class="flex text-white">
         <li class="ml-5 px-2 py-1 navbar_button"><a href="/">Home</a></li>
         <li class="ml-5 px-2 py-1 navbar_button"><a href="/">Courses</a></li>
