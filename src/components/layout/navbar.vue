@@ -10,20 +10,14 @@
   <!--     <SearchOutlined class="my-1 mx-3" /> -->
   <!--   </div> -->
   <!-- </div> -->
-  <div
-    class="navbar items-center justify-between flex bg-gray-800 text-neutral-content sticky top-0 z-50"
-  >
-    <div
-      class="text-2xl text-white font-semibold inline-flex items-center min-w-60"
-    >
+  <div class="navbar items-center justify-between flex bg-gray-800 text-neutral-content sticky top-0 z-50">
+    <div class="text-2xl text-white font-semibold inline-flex items-center min-w-60">
       <span>Sapientia-Creatrix</span>
     </div>
     <div class="inline-flex item-center">
       <ul class="flex">
         <input class="border-2 border-solid my-2 rounded-l-lg w-100" />
-        <div
-          class="text-white border-2 border-l-0 border-solid rounded-r-lg my-2"
-        > 
+        <div class="text-white border-2 border-l-0 border-solid rounded-r-lg my-2">
           <router-link :to="'/search'">
             <SearchOutlined class="my-1 mx-3" />
           </router-link>
@@ -33,11 +27,11 @@
     <div class="flex-none gap-2">
       <ul class="flex text-white">
         <li class="ml-5 px-2 py-1 navbar_button"><a href="/">Home</a></li>
-        <li class="ml-5 px-2 py-1 navbar_button"><a href="/">Courses</a></li>
+        <li class="ml-5 px-2 py-1 navbar_button">
+          <router-link :to="'/course'">Courses</router-link>
+        </li>
         <li class="ml-5 px-2 py-1 navbar_button"><a href="/">Skills</a></li>
-        <li
-          class="ml-5 px-3 py-1 rounded font-semibold bg-gray-100 text-gray-800 navbar_button"
-        >
+        <li class="ml-5 px-3 py-1 rounded font-semibold bg-gray-100 text-gray-800 navbar_button">
           <router-link :to="'/user'">My Profile</router-link>
         </li>
       </ul>
