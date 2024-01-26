@@ -1,6 +1,6 @@
 <template>
   <Nav class="navbar_normal"></Nav>
-  <UserProfile class="content-below-nav"></UserProfile>
+  <UserProfile class=""></UserProfile>
 </template>
 
 <script setup lang="ts">
