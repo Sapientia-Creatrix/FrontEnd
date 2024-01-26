@@ -46,9 +46,18 @@
 
       <div class="mt-12 flex flex-col justify-center">
         <p class="text-gray-600 text-center font-light lg:px-16">INTRO</p>
-        <button class="text-indigo-500 py-2 px-4 font-medium mt-4">
+        <button v-if="showMore === false" class="text-indigo-500 py-2 px-4 font-medium mt-4"
+          v-on:click="changeShowMore()">
           Show more
         </button>
+      </div>
+
+      <div v-if="showMore === true" class="justify-center mt-12 text-sm">
+        <calendar-heatmap :max="100" :values="[{ date: '2023-9-22', count: 6 },
+        { date: '2023-9-01', count: 12 },
+        { date: '2023-11-22', count: 17 },
+        { date: '2023-10-30', count: 38 },
+        ]" :end-date="endDate" :range-color="['#c0ddf9', '#73b3f3', '#3886e1', '#17459e']" />
       </div>
     </div>
   </div>
@@ -56,4 +65,16 @@
 
 <script setup lang="ts">
 import { UserOutlined } from "@ant-design/icons-vue";
+import { ref } from "vue";
+
+const showMore = ref(false);
+
+const currentDate = new Date()
+const endDate = currentDate.toISOString().split('T')[0]
+
+function changeShowMore() {
+  showMore.value = true;
+  console.log(showMore);
+}
+
 </script>
