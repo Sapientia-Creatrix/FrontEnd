@@ -37,6 +37,11 @@ const routes = [
     name: "Path",
     component: () => import("../views/page_path.vue"),
   },
+  {
+    path: "/user/badge",
+    name: "Badge",
+    component: () => import("../views/page_badge.vue")
+  }
 ];
 
 const router = createRouter({
