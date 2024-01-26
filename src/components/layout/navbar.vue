@@ -10,9 +10,7 @@
   <!--     <SearchOutlined class="my-1 mx-3" /> -->
   <!--   </div> -->
   <!-- </div> -->
-  <div
-    class=""
-  >
+  <div class="">
     <div
       class="text-2xl text-white font-semibold inline-flex items-center min-w-60"
     >

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow-y-auto overflow-x-hidden max-h-screen select-none">
     <div
       class="sticky font-bold text-2xl border-1 border-solid py-2 md-2 top-0 bg-gray-200"
     >
