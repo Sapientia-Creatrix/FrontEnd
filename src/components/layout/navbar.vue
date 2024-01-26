@@ -11,9 +11,11 @@
   <!--   </div> -->
   <!-- </div> -->
   <div class="">
-    <div class="navbar-start text-2xl text-white font-semibold min-w-60">
-      <span>Sapientia-Creatrix</span>
-    </div>
+    <router-link :to="'/'">
+      <div class="navbar-start text-2xl text-white font-semibold min-w-60">
+        <span>Sapientia-Creatrix</span>
+      </div>
+    </router-link>
     <div class="navbar-end inline-flex item-center">
       <ul class="flex">
         <input class="border-2 border-solid my-2 rounded-l-lg w-100" />
