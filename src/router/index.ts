@@ -31,7 +31,7 @@ const routes = [
     path: "/user/update",
     name: "Update",
     component: () => import("../views/page_update.vue"),
-  }
+  },
 ];
 
 const router = createRouter({

@@ -1,9 +1,7 @@
 <template>
   <div class="flex">
-    <div class="w-3/4 border-2">
-
-    </div>
-    <Content class="w-1/4"></Content>
+    <div class="w-full border-2"></div>
+    <Content class="w-1/4 max-w-[20rem]"></Content>
   </div>
 </template>
 

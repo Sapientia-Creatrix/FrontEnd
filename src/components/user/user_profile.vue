@@ -2,7 +2,9 @@
   <div class="p-16">
     <div class="p-8 bg-white shadow mt-24">
       <div class="grid grid-cols-1 md:grid-cols-3">
-        <div class="grid grid-cols-3 text-center order-last md:order-first mt-20 md:mt-0">
+        <div
+          class="grid grid-cols-3 text-center order-last md:order-first mt-20 md:mt-0"
+        >
           <div>
             <p class="font-bold text-gray-700 text-xl">NUM</p>
             <p class="text-gray-400">SKILLS</p>
@@ -18,21 +20,24 @@
         </div>
         <div class="relative text-black border-solid">
           <div
-            class="w-48 h-48 bg-indigo-100 mx-auto rounded-full shadow-2xl absolute inset-x-0 top-0 -mt-24 flex items-center justify-center text-indigo-500">
+            class="w-48 h-48 bg-indigo-100 mx-auto rounded-full shadow-2xl absolute inset-x-0 top-0 -mt-24 flex items-center justify-center text-indigo-500"
+          >
             <UserOutlined class="h-24 w-24" style="font-size: 80px" />
           </div>
         </div>
 
-        <div class="space-x-8 flex justify-between mt-32 md:mt-0 md:justify-center">
+        <div
+          class="space-x-8 flex justify-between mt-32 md:mt-0 md:justify-center"
+        >
           <button
-            class="text-white py-2 px-4 uppercase rounded bg-blue-400 hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
+            class="text-white py-2 px-4 uppercase rounded bg-blue-400 hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"
+          >
             BUTTON
           </button>
           <button
-            class="text-white py-2 px-4 uppercase rounded bg-gray-700 hover:bg-gray-800 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
-            <router-link :to="'/user/update'">
-              UPDATE
-            </router-link>
+            class="text-white py-2 px-4 uppercase rounded bg-gray-700 hover:bg-gray-800 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"
+          >
+            <router-link :to="'/user/update'"> UPDATE </router-link>
           </button>
         </div>
       </div>

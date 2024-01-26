@@ -1,6 +1,6 @@
 <template>
-  <Nav></Nav>
-  <UpdateProfile class="content-below-nav"></UpdateProfile>
+  <Nav class="navbar_normal"></Nav>
+  <UpdateProfile class="my-8"></UpdateProfile>
 </template>
 
 <script setup lang="ts">
