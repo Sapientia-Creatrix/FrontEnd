@@ -28,7 +28,8 @@
         <li class="ml-5 px-2 py-1 navbar_button">
           <router-link :to="'/course'">Courses</router-link>
         </li>
-        <li class="ml-5 px-2 py-1 navbar_button"><a href="/">Skills</a></li>
+        <li class="ml-5 px-2 py-1 navbar_button"><router-link :to="'/user/path'
+          ">Learning Path</router-link></li>
         <li class="ml-5 px-3 py-1 rounded font-semibold bg-gray-100 text-gray-800 navbar_button">
           <router-link :to="'/user'">My Profile</router-link>
         </li>
