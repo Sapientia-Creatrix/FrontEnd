@@ -45,7 +45,12 @@ const routes = [
   {
     path: "/register",
     name: "Register",
-    component: () => import("../views/page_register.vue"),
+    component: () => import("../views/page_register.vue")
+  },
+  {
+    path: "/user/badge",
+    name: "Badge",
+    component: () => import("../views/page_badge.vue")
   }
 ];
 
