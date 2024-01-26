@@ -5,14 +5,19 @@
       <div v-for="item in items" :key="item.value" class="p-2 border-2 rounded-md drop-shadow-md select-none"
       :class="{'bg-gray-200': item.choose}" @click="information_click(item.index)">{{item.text}}</div>
     </div>
-    <div v-for="item in 200" :key="item">
-      {{ item }}
+    <div>
+
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import {ref} from "vue"
+import Comment from "@/components/course/comment.vue"
+import Rate from "@/components/course/rate.vue"
+import Introduction from "@/components/course/introduction.vue"
+
+const down_block = ref<Number>(0);
 
 interface information{
   text: string,
@@ -23,12 +28,14 @@ interface information{
 
 const items = ref<information[]>([
   {text:"Introduction", choose: true, value:0, index: 0},
-  {text:"Comment", choose: false, value:1, index: 1}
+  {text:"Comment", choose: false, value:1, index: 1},
+  {text:"Rate", choose: false, value:3, index: 2}
 ])
 
 function information_click(index: number) {
-  items.value.forEach((item, idx) => {
+  items.value.forEach((item: information, idx: number) => {
     item.choose = idx === index;
   });
+  down_block.value = index;
 }
 </script>
