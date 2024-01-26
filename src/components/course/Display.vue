@@ -15,12 +15,16 @@
 import Content from "@/components/course/content.vue";
 import { Splitpanes, Pane } from "splitpanes";
 import "splitpanes/dist/splitpanes.css";
-import { onMounted } from "vue";
+import { onMounted, onUnmounted } from "vue";
 import Main from "@/components/course/main.vue";
 
 onMounted(() => {
   document.body.style.overflow = "hidden";
 });
+
+onUnmounted(() => {
+  document.body.style.overflow = "auto";
+})
 </script>
 
 <style></style>
