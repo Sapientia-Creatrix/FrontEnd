@@ -26,7 +26,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineComponent } from "vue";
+import { ref, defineComponent, defineProps, PropType} from "vue";
+
+// const props = defineProps({
+//   data: {
+//     type: null as unknown as PropType<any>,
+//     required: true,
+//   },
+// });
 
 defineComponent({
   name: 'MaterialSymbolsStarRateOutline',
@@ -37,5 +44,6 @@ defineComponent({
 defineComponent({
   name: 'MaterialSymbolsStarRate',
 });
+// console.log(props.data)
 const item = ref(4.4);
 </script>
