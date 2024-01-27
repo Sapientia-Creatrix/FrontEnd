@@ -4,15 +4,15 @@
       <div class="grid grid-cols-1 md:grid-cols-3">
         <div class="grid grid-cols-3 text-center order-last md:order-first mt-20 md:mt-0">
           <div>
-            <p class="font-bold text-gray-700 text-xl">NUM</p>
+            <p class="font-bold text-gray-700 text-xl">11</p>
             <p class="text-gray-400">SKILLS</p>
           </div>
           <div>
-            <p class="font-bold text-gray-700 text-xl">NUM</p>
-            <p class="text-gray-400">COMPLETE</p>
+            <p class="font-bold text-gray-700 text-xl">{{ datas[0]['coin'] }}</p>
+            <p class="text-gray-400">COIN</p>
           </div>
           <div>
-            <p class="font-bold text-gray-700 text-xl">NUM</p>
+            <p class="font-bold text-gray-700 text-xl">7</p>
             <p class="text-gray-400">BADGE</p>
           </div>
         </div>
@@ -37,15 +37,15 @@
 
       <div class="mt-20 text-center border-b pb-12">
         <h1 class="text-4xl font-medium text-gray-700">
-          NAME <span class="font-light text-gray-500">AGE</span>
+          {{ datas[0].name }}<span class="font-light text-gray-500">, 25</span>
         </h1>
 
-        <p class="mt-8 text-gray-500">OCCUPATION</p>
-        <p class="mt-2 text-gray-500">SCHOOL</p>
+        <p class="mt-8 text-gray-500">National Chung Cheng University</p>
+        <p class="mt-2 text-gray-500">Student</p>
       </div>
 
       <div class="mt-12 flex flex-col justify-center">
-        <p class="text-gray-600 text-center font-light lg:px-16">INTRO</p>
+        <!-- <p class="text-gray-600 text-center font-light lg:px-16">INTRO</p> -->
         <button v-if="showMore === false" class="text-indigo-500 py-2 px-4 font-medium mt-4"
           v-on:click="changeShowMore()">
           Show more
@@ -65,16 +65,36 @@
 
 <script setup lang="ts">
 import { UserOutlined } from "@ant-design/icons-vue";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import axios from 'axios';
 
 const showMore = ref(false);
 
 const currentDate = new Date()
 const endDate = currentDate.toISOString().split('T')[0]
 
+let datas = ref<Array<any>>([{}]);
+
+async function get_user() {
+  try {
+    const response = await axios.get('http://45.55.133.103:3000/user', {
+      params: {
+        id: 1
+      }
+    });
+    console.log(response.data);
+    return response.data; // 直接返回数据
+  } catch (error) {
+    console.error('请求错误:', error);
+  }
+}
+
 function changeShowMore() {
   showMore.value = true;
   console.log(showMore);
 }
 
+onMounted(async () => {
+  datas.value = await get_user();
+})
 </script>

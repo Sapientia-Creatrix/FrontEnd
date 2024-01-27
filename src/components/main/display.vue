@@ -2,7 +2,9 @@
   <div class="py-2 ml-[4rem]">
     <div class="grid gap-8 grid-cols-4 sm:grid-cols-2 lg:grid-cols-4">
       <div class="" v-for="(data, index) in datas" :key="index">
-        <a href=/#/course ><Course_card :data="data" @click="click_course(data.id)"></Course_card></a>
+        <a href=/#/course>
+          <Course_card :data="data" @click="click_course(data.id)"></Course_card>
+        </a>
       </div>
     </div>
   </div>
@@ -10,10 +12,10 @@
 
 <script setup lang="ts">
 import Course_card from "@/components/main/course_card.vue";
-import {ref, onMounted} from "vue";
+import { ref, onMounted } from "vue";
 import axios from 'axios';
 
-let datas = ref<Array<any>>([]);
+let datas = ref<Array<any>>([{}]);
 
 async function suggest_basic() {
   try {
@@ -28,12 +30,12 @@ async function suggest_basic() {
   }
 }
 
-function click_course(value:Number): void{
+function click_course(value: Number): void {
   console.log(value);
   localStorage.setItem("course_id", value.toString());
 }
 
-onMounted(async() => {
+onMounted(async () => {
   datas.value = await suggest_basic();
 })
 </script>
