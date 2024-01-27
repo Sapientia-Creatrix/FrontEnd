@@ -1,6 +1,7 @@
 <template>
   <div class="max-h-screen overflow-y-auto overflow-x-hidden">
     <div class="h-[65vh] bg-black"></div>
+    <div class="text-4xl font-bold m-2"> name </div>
     <div class="flex">
       <div v-for="item in items" :key="item.value" class="p-2 border-2 rounded-md drop-shadow-md select-none"
         :class="{ 'bg-gray-200': item.choose }" @click="information_click(item.index)">{{ item.text }}</div>
