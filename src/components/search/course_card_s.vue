@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, PropType, defineProps } from "vue";
+import { PropType, defineProps } from "vue";
 
 const props = defineProps({
   data: {

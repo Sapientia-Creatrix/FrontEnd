@@ -7,7 +7,7 @@
         <SendOutlined class="text-2xl"/>
       </div>
     </div>
-    <div v-for="(item, index) in comments" :key="item.id" class="border-b-[1px] border-slate-400" :class="{'border-y-[1px]':index == 0}">
+    <div v-for="(item, index) in comments" :key="index" class="border-b-[1px] border-slate-400" :class="{'border-y-[1px]':index == 0}">
       <div class="m-4 font-bold">{{ item.user }}</div>
       <div class="m-8">{{ item.content }}</div>
     </div>
@@ -30,7 +30,7 @@ interface comment {
   like: number,
 }
 
-const comments = ref<comment>([
+const comments = ref<Array<comment>>([
   { id: 0, user: "01", content: "dwadwadwad", time: "", like: 0 },
   { id: 0, user: "02", content: "dwadwad", time: "", like: 0 },
   { id: 0, user: "02", content: "dwadwad", time: "", like: 0 }

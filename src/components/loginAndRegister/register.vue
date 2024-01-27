@@ -6,8 +6,8 @@
     <div class="w-full h-auto p-8">
       <input class="border select-none pl-4 min-h-[3.5rem] w-full my-2 rounded-lg" type="text" v-model="username" placeholder="Username">
       <input class="border select-none pl-4 min-h-[3.5rem] w-full my-2 rounded-lg" type="password" v-model="password" placeholder="Password">
-      <input class="border select-none pl-4 min-h-[3.5rem] w-full my-2 rounded-lg" type="password" v-model="confirm_passwordpassword" placeholder="Confirm Password">
-      <input class="border select-none pl-4 min-h-[3.5rem] w-full my-2 rounded-lg" type="text" v-model="mail" placeholder="E-mail address">
+      <input class="border select-none pl-4 min-h-[3.5rem] w-full my-2 rounded-lg" type="password" v-model="confirm_password" placeholder="Confirm Password">
+      <input class="border select-none pl-4 min-h-[3.5rem] w-full my-2 rounded-lg" type="text" v-model="email" placeholder="E-mail address">
       <div class="border items-center select-none pl-4 min-h-[3.5rem] w-full my-2 rounded-lg text-center text-xl text-white bg-gray-500 flex hover:bg-gray-400" @click="SignIn()">
         <div class="w-full">Sign Up</div>
       </div>
